@@ -14,7 +14,9 @@ pip install git+https://github.com/boomb0om/m3u8-downloader
 ```python
 from m3u8_client import M3U8Client
 client = M3U8Client()
-client.download_url("https://example.com/path/to/file.m3u8")
+data = client.download_url("https://example.com/path/to/file.m3u8")
+with open('test.mp3', 'wb') as f:
+    f.write(data)
 ```
 
 Async example:
